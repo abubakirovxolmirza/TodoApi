@@ -3,12 +3,9 @@
 git clone https://github.com/abubakirovxolmirza/TodoApi
 ```
 ```bash
-docker buld -t todo:1.0
+docker build -t todo:1.0 .
+docker run -p 1212:8000 todo:1.0
 ```
-
-API ning asosiy manbalarini ishlatish uchun `.../api/todos/` endpoint'ini ishlatishingiz mumkin. 
-
-Boshqa ma'lumotlarni olish va o'zgartirish uchun mos keladigan endpoint'larni ham ishlatishingiz mumkin.
 
 ## Endpointlar
 
