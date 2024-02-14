@@ -1,10 +1,17 @@
 from rest_framework import generics
 from rest_framework.response import Response
+
+
 from .models import Todo
 from .serialazers import TodoSerializer
 
 
 class TodoListCreateView(generics.ListCreateAPIView):
+    """
+    Bu class Todo yaratish va barcha Todolar
+    ro'yhatini qaytarishga xizmat qiladi.
+    """
+
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
 
@@ -17,6 +24,11 @@ class TodoListCreateView(generics.ListCreateAPIView):
 
 
 class TodoRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Bu class Todoni o'zgarish va o'chirishga
+    xizmat qiladi.
+    """
+
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
 

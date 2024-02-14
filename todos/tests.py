@@ -1,6 +1,5 @@
 from django.test import TestCase
 from rest_framework.test import APIClient
-from selenium.webdriver.chrome import webdriver
 
 from .models import Todo
 from django.utils import timezone
@@ -57,7 +56,6 @@ class TodoViewTest(TestCase):
 
     def test_title(self):
         response = self.client.get('/api/')
-
 
     def test_status_codes(self):
 
